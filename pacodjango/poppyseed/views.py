@@ -3,12 +3,10 @@ from django.shortcuts import render
 from poppyseed.MCP3008 import MCP3008
 
 DRY = 760
+WET = 380
 MAX = 1023
 MIN = 0
 OFF = 11
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
 
 def hydration(request):
     adc = MCP3008()
